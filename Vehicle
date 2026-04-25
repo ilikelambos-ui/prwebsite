@@ -1,0 +1,138 @@
+{
+  "name": "Vehicle",
+  "type": "object",
+  "properties": {
+    "year": {
+      "type": "number",
+      "description": "Vehicle year"
+    },
+    "make": {
+      "type": "string",
+      "description": "Vehicle manufacturer"
+    },
+    "model": {
+      "type": "string",
+      "description": "Vehicle model"
+    },
+    "trim": {
+      "type": "string",
+      "description": "Vehicle trim level"
+    },
+    "price": {
+      "type": "number",
+      "description": "Asking price"
+    },
+    "mileage": {
+      "type": "number",
+      "description": "Odometer reading"
+    },
+    "vin": {
+      "type": "string",
+      "description": "Vehicle Identification Number"
+    },
+    "stock_number": {
+      "type": "string",
+      "description": "Dealer stock number"
+    },
+    "exterior_color": {
+      "type": "string",
+      "description": "Exterior color"
+    },
+    "interior_color": {
+      "type": "string",
+      "description": "Interior color"
+    },
+    "body_style": {
+      "type": "string",
+      "enum": [
+        "Sedan",
+        "SUV",
+        "Truck",
+        "Coupe",
+        "Van",
+        "Convertible",
+        "Wagon",
+        "Hatchback",
+        "Other"
+      ],
+      "description": "Body style"
+    },
+    "transmission": {
+      "type": "string",
+      "enum": [
+        "Automatic",
+        "Manual",
+        "CVT",
+        "Other"
+      ],
+      "description": "Transmission type"
+    },
+    "drivetrain": {
+      "type": "string",
+      "enum": [
+        "FWD",
+        "RWD",
+        "AWD",
+        "4WD",
+        "Other"
+      ],
+      "description": "Drivetrain"
+    },
+    "fuel_type": {
+      "type": "string",
+      "enum": [
+        "Gasoline",
+        "Diesel",
+        "Hybrid",
+        "Electric",
+        "Flex Fuel",
+        "Other"
+      ],
+      "description": "Fuel type"
+    },
+    "engine": {
+      "type": "string",
+      "description": "Engine description"
+    },
+    "doors": {
+      "type": "number",
+      "description": "Number of doors"
+    },
+    "description": {
+      "type": "string",
+      "description": "Vehicle description"
+    },
+    "features": {
+      "type": "string",
+      "description": "Comma-separated list of features"
+    },
+    "photos": {
+      "type": "array",
+      "description": "Vehicle photo URLs",
+      "items": {
+        "type": "string"
+      }
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "available",
+        "pending",
+        "sold"
+      ],
+      "default": "available",
+      "description": "Vehicle availability status"
+    },
+    "just_arrived": {
+      "type": "boolean",
+      "default": true,
+      "description": "Flag for newly added vehicles"
+    }
+  },
+  "required": [
+    "year",
+    "make",
+    "model",
+    "price"
+  ]
+}
